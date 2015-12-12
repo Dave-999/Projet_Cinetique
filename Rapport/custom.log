@@ -1,0 +1,86 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdftex 2014.11.23)  13 NOV 2015 13:42
+entering extended mode
+**C:/Users/David/Documents/GitHub/APP-Proba-2015/custom.sty
+(C:/Users/David/Documents/GitHub/APP-Proba-2015/custom.sty
+! Undefined control sequence.
+l.1 \NeedsTeXFormat
+                   {LaTeX2e}
+? 
+! Undefined control sequence.
+l.2 \ProvidesPackage
+                    {custom}[2014/05/11 Custom Package]
+? 
+! Undefined control sequence.
+l.4 \usepackage
+               {fancyhdr}
+? 
+! Undefined control sequence.
+l.5 \usepackage
+               [utf8]{inputenc}
+? 
+! Undefined control sequence.
+l.6 \usepackage
+               [T1]{fontenc}
+? 
+! Undefined control sequence.
+l.7 \usepackage
+               [francais]{babel}
+? 
+! Undefined control sequence.
+l.9 \usepackage
+               [version=3]{mhchem}
+? 
+! Undefined control sequence.
+l.10 \usepackage
+                {chemfig}
+? 
+! Undefined control sequence.
+l.11 \usepackage
+                {amsmath}
+? 
+! Undefined control sequence.
+l.12 \usepackage
+                {amsthm}
+? 
+! Undefined control sequence.
+l.13 \usepackage
+                {amsfonts}
+? 
+! Undefined control sequence.
+l.15 \usepackage
+                {graphicx}
+? 
+! Undefined control sequence.
+l.16 \usepackage
+                [top=3cm, bottom=3cm, left=3cm , right=3cm]{geometry}
+? 
+! Undefined control sequence.
+l.18 \usepackage
+                {siunitx}
+? 
+! Undefined control sequence.
+l.20 \usepackage
+                {tikz}
+? 
+! Undefined control sequence.
+l.21 \usetikzlibrary
+                    {positioning}
+? 
+! Undefined control sequence.
+l.22 \usetikzlibrary
+                    {shapes,arrows}
+? 
+! Undefined control sequence.
+l.24 \usepackage
+                {tabularx}
+? 
+! Undefined control sequence.
+l.25 \usepackage
+                {url}
+? 
+! Emergency stop.
+l.25 \usepackage
+                {url}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
