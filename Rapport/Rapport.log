@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.23)  12 DEC 2015 19:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.23)  13 DEC 2015 01:37
 entering extended mode
 **Rapport.tex
 (C:\Users\David\Documents\GitHub\Projet_Cinetique\Rapport\Rapport.tex
@@ -1685,7 +1685,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count302
 
-<Images/plexi.jpg, id=46, 301.125pt x 233.87375pt>
+<Images/plexi.jpg, id=50, 301.125pt x 233.87375pt>
 File: Images/plexi.jpg Graphic file (type jpg)
  <use Images/plexi.jpg>
 Package pdftex.def Info: Images/plexi.jpg used on input line 29.
@@ -1705,7 +1705,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--40
 
  []
 
-<Images/epl-logo.jpg, id=47, 563.10374pt x 133.49875pt>
+<Images/epl-logo.jpg, id=51, 563.10374pt x 133.49875pt>
 File: Images/epl-logo.jpg Graphic file (type jpg)
 
 <use Images/epl-logo.jpg>
@@ -1807,21 +1807,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
  (C:\Users\David\Documents\GitHub\Projet_Cinetique\Rapport\Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 8D4151F0DB4F477EC470E2486FE6FE4B;677.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
+(rerunfilecheck)             Checksum: 6CE6FF20964A825421ECF19AA6120F77;757.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 32641 strings out of 493921
- 654517 string characters out of 3144875
- 750521 words of memory out of 3000000
- 35405 multiletter control sequences out of 15000+200000
+ 32644 strings out of 493921
+ 654553 string characters out of 3144875
+ 750520 words of memory out of 3000000
+ 35406 multiletter control sequences out of 15000+200000
  15095 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  69i,16n,69p,10412b,840s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1840,9 +1840,9 @@ amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb>
-Output written on Rapport.pdf (4 pages, 206533 bytes).
+Output written on Rapport.pdf (5 pages, 219732 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

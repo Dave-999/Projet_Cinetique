@@ -122,8 +122,32 @@ Finalement, l'HQSR utilisée sur les radicaux R nous permet de dire que $\sum\li
 
 $$[R]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
 
-$\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$
+$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{TrH}=-\frac{d[TrH]}{dt}=k_s[R][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$ ce qui donne après intégration:
 
+$$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})$$
+$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}$$
+
+
+$\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
+
+$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}$$
+
+$\bullet$La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R]^2+k_{s}[R][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. En développant et mettant les $[R]_{t=0}$ en évidence, on a :
+$$[P]=\int_{0}^t R_{0}^{2}k_te^{-k_0t'}+k_sR_0e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}R_0(e^{-k_0t'/2}-1)} dt'$$
+Le résultat de cette intégrale est:
+$$[P]=-\frac{k_t[R]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R]_{t=0}^2}{k_0}+k_s[R]_{t=0}e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R]_{t=0}$$
+$$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R]_{t=0}(e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
+
+\subsection{Degré de polymérisation}
+Soit $\alpha$ la probabilité d'allongement d'une chaine radicalaire en croissance: 
+$$\alpha=\frac{k_p[R][M]}{k_p[R][M]+k_s[R][TrH]+k_t[R]^2}
+=\frac{1}
+      {1+   \frac{k_s}{k_p}e^{\frac{k_s}{k_p}}     +\frac{k_t[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}        
+                                                    {k_pe^{\frac{2k_p[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}    }}
+                                                    }$$
+On obtient le degré de polymérisation moyen en nombre (DPn) ou en poids (DPw) comme des fonctions dépendant du temps:
+$$DPn=\frac{2}{1-\alpha}$$
+$$DPw=\frac{2+\alpha}{1-\alpha}$$
 
 \section{Influence des différents effets observés}
 
