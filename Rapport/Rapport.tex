@@ -13,42 +13,59 @@
 
 \begin{document}
 
-\begin{titlepage}
-
-\begin{center}
-\Huge
-\textbf{MAPR1400 - Projet en cinétique appliquée\\}
-\vspace{0.5cm}
-\huge
-\textbf{Polymérisation du méthacrylate de méthyle\\}
-\Large
-\vspace{0.5cm}
-\textbf{Année académique 2015-2016\\}
-\begin{figure}[b!]
-	\center
-	\includegraphics[width=12cm]{Images/plexi.jpg}
-\end{figure}
-
-\end{center}
-\begin{figure}[b!]
-\begin{Large}
-\end{Large}
-	DISPAS David, 7189-12-00\\
-	PAQUET Arnaud, 3668-13-00\\
+\begin{titlepage} 
+	\centering
+	{\LARGE \textsc{Université Catholique de Louvain}}\\
+	{\large \textsc{École Polytechnique de Louvain}}\\
+	
+	\vspace{1.3cm}
+	
+	\begin{center}
+	\includegraphics[scale=0.65]{Images/plexi.jpg}
+	\end{center}
+	
+	\vspace{1.1cm}
+	\hrulefill
 	\\
-	\newline
-	\center
-	\includegraphics[width=7cm]{Images/epl-logo.jpg}
-\end{figure}
+	\vspace{0.9cm}
+	{\huge \textbf{LMAPR1400}}\\
+	\vspace{0.25cm}
+	{\huge \textbf{Cinétique appliquée}} \\ 
+	\vspace{0.7cm}
+	{\huge \textbf{Cinétique de polymérisation du méthacrylate de méthyle}} \\
+	\vspace{0.5cm}
+	\hrulefill
+	\\
+	\vspace{0.9cm}
+	
+	\begin{center}
+		\begin{tabular}{rl}
+			
+			\textsc{Dispas} David & (5055-13-00)\\
+			\textsc{Paquet} Arnaud & (3668-13-00)\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\vfill
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{Images/epl-logo.jpg}
+	\end{center}
+	
+	\vspace{0.5cm}
+	
+	{\normalsize Année académique 2015 - 2016}\\
+	
 \end{titlepage}
 
-\section{Applications du plexiglas dans la vie courante}
+\part{Applications du plexiglas dans la vie courante}
 
 Le polyméthacrylate de méthyle (PMMA) est un polymère thermoplastique transparent. Plus connu sous le nom de plexiglas,...
 
-\section{Evolution des concentrations}
+\part{Evolution des concentrations}
 La réaction que nous analysons est une polymérisation radicalaire. Elle peut donc être décomposée en les étapes suivantes:
-\subsection{Amorçage}
+\section{Amorçage}
 L'amorceur utilisé est une molécule d'azobisisobutyronitrile (AIBN). 
 \begin{equation}
 	\ce{AIBN \underset{lent}{\xrightarrow{k_0}} N2 + 2A^\bullet}
@@ -61,7 +78,7 @@ La vitesse de décomposition de l'AIBN est très lente part rapport à celle de 
 
 où M est un monomère de MMA et $\ce{Rj}$ est une chaine en croissance composée d'un A auquel j monomères M se sont ajoutés. Nous pouvons utiliser l'hypothèse de quasi-stationnarité du radical (HQSR) $\frac{d[A^{\bullet}]}{dt}=0$ et ainsi obtenir que $2fk_{0}[AIBN]=k_{i}[A^{\bullet}][M]=r_i$.
 
-\subsection{Propagation}
+\section{Propagation}
 Les chaînes deviennent de plus en plus grandes en annexant des monomères. Pour une chaine de longueur 1 par exemple:
 \begin{equation}
 \ce{R1 + M \xrightarrow{k_p} R2}
@@ -72,15 +89,15 @@ Nous pouvons généraliser pour une longueur arbitraire:
 \end{equation}
 Les $k_{p}$ de toutes les réactions de propagation sont considérés égaux, ce qui n'est théoriquement valable que pour des grandes chaines. Ceci est l'hypothèse d'équiréactivité de Flory.
 
-\subsection{Terminaison}
-Il existe deux types de terminaisons: la recombinaison et la dismutation. Travaillant à la température de 22.5°C, nous négligerons ici la seconde qui ne se produit qu'à plus haute température. La réaction de recombinaison est la suivante:
+\section{Terminaison}
+Il existe deux types de terminaisons: la recombinaison et la dismutation. Travaillant à la température de 22,5$^{\circ}$C, nous négligerons ici la seconde qui ne se produit qu'à plus haute température. La réaction de recombinaison est la suivante:
 
 \begin{equation}
 \ce{R_{n} + R_{m} \xrightarrow{k_t} P_{n+m}}
 \end{equation}
 où $P_{j}$ est une molécule de PMMA de longueur j. Pour simplifier, nous ferons l'hypothèse que $k_{t}$ ne dépend pas de la longueur des chaines.
 
-\subsection{Transfert}
+\section{Transfert}
 Nous disposons de plusieurs agents de transfert Tr pour lesquels nous connaissons les $C_{s}=\frac{k_{s}}{k_{p}}$. Ces derniers peuvent neutraliser une chaine et produire un radical qui pourra amorcer une nouvelle chaine:
 \begin{equation}
 \ce{R_{j} + TrH \xrightarrow{k_s} R_{j}H + Tr^{\bullet}}
@@ -91,7 +108,7 @@ Nous disposons de plusieurs agents de transfert Tr pour lesquels nous connaisson
 \end{equation}
 
 Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
-\subsection{Calcul des lois de concentrations}
+\section{Calcul des lois de concentrations}
 $\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
 
 $\bullet$ La vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
@@ -138,7 +155,7 @@ Le résultat de cette intégrale est:
 $$[P]=-\frac{k_t[R]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R]_{t=0}^2}{k_0}+k_s[R]_{t=0}e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R]_{t=0}$$
 $$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R]_{t=0}(e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
 
-\subsection{Degré de polymérisation}
+\section{Degré de polymérisation}
 Soit $\alpha$ la probabilité d'allongement d'une chaine radicalaire en croissance: 
 $$\alpha=\frac{k_p[R][M]}{k_p[R][M]+k_s[R][TrH]+k_t[R]^2}
 =\frac{1}
@@ -149,10 +166,10 @@ On obtient le degré de polymérisation moyen en nombre (DPn) ou en poids (DPw) 
 $$DPn=\frac{2}{1-\alpha}$$
 $$DPw=\frac{2+\alpha}{1-\alpha}$$
 
-\section{Influence des différents effets observés}
+\part{Influence des différents effets observés}
 
-\section{Epuisement de l'amorceur}
+\part{Epuisement de l'amorceur}
 
-\section{Effets de la température}
+\part{Effets de la température}
 
 \end{document}
