@@ -50,7 +50,7 @@
 	\vfill
 	
 	\begin{center}
-		\includegraphics[scale=0.3]{Images/epl-logo.jpg}
+		\includegraphics[scale=0.25]{Images/epl-logo.jpg}
 	\end{center}
 	
 	\vspace{0.4cm}
@@ -79,59 +79,65 @@ L'amorceur utilisé est une molécule d'azobisisobutyronitrile (AIBN).
 \begin{equation}
 	\ce{AIBN \underset{lent}{\xrightarrow{k_0}} N2 + 2A^\bullet}
 \end{equation}	
-La vitesse de décomposition de l'AIBN est très lente part rapport à celle de la seconde réaction. Seule une fraction f des radicaux créés est efficace pour réagir ensuite de la manière suivante:
+La vitesse de décomposition de l'AIBN est très lente part rapport à la réaction \ref{2}. Seule une fraction f des radicaux créés est efficace pour réagir ensuite de la manière suivante:
 
 \begin{equation}
-\ce{A^{\bullet} + M \underset{rapide}{\xrightarrow{k_i}} R1} 
+\ce{A^{\bullet} + M \underset{rapide}{\xrightarrow{k_i}} R1^\bullet}
+\label{2}
 \end{equation}
 
-où M est un monomère de MMA et $\ce{Rj}$ est une chaine en croissance composée d'un A auquel j monomères M se sont ajoutés. Nous pouvons utiliser l'hypothèse de quasi-stationnarité du radical (HQSR) $\frac{d[A^{\bullet}]}{dt}=0$ et ainsi obtenir que $2fk_{0}[AIBN]=k_{i}[A^{\bullet}][M]=r_i$.
+où M est une molécule de méthacrylate de méthyle et $\ce{R_1}$ est un radical en croissance. Nous pouvons utiliser l'hypothèse de quasi-stationnarité du radical (HQSR) $\frac{d[A^{\bullet}]}{dt}=0$ et ainsi obtenir que $2fk_{0}[AIBN]=k_{i}[A^{\bullet}][M]=r_i$.
 
 \section{Propagation}
-Les chaînes deviennent de plus en plus grandes en annexant des monomères. Pour une chaine de longueur 1 par exemple:
+La chaîne devient de plus en plus grande en annexant des monomères. Pour une chaine de longueur 1, nous avons :
 \begin{equation}
-\ce{R1 + M \xrightarrow{k_p} R2}
+\ce{R1^\bullet + M \xrightarrow{k_p} R2^\bullet}
 \end{equation}
-Nous pouvons généraliser pour une longueur arbitraire:
+Nous pouvons généraliser cela à $\ce{R_j}$, une chaîne en croissance composée d'un A auquel j monomères M se sont ajoutés :
 \begin{equation}
-\ce{R_{j} + M \xrightarrow{k_p} R_{j+1}}
+\ce{R_j^\bullet + M \xrightarrow{k_p} R_{j+1}^\bullet}
 \end{equation}
-Les $k_{p}$ de toutes les réactions de propagation sont considérés égaux, ce qui n'est théoriquement valable que pour des grandes chaines. Ceci est l'hypothèse d'équiréactivité de Flory.
+Les constantes de vitesse $k_{p}$ de toutes les réactions de propagation sont considérés égales, ce qui n'est théoriquement valable que pour chaînes de longueur supérieure à quelques unités. Ceci est l'hypothèse d'équiréactivité de Flory.
 
 \section{Terminaison}
 Il existe deux types de terminaisons: la recombinaison et la dismutation. Travaillant à la température de 22,5$^{\circ}$C, nous négligerons ici la seconde qui ne se produit qu'à plus haute température. La réaction de recombinaison est la suivante:
 
 \begin{equation}
-\ce{R_{n} + R_{m} \xrightarrow{k_t} P_{n+m}}
+\ce{R_{n}^\bullet + R_{m}^\bullet \xrightarrow{k_t} P_{n+m}}
 \end{equation}
 où $P_{j}$ est une molécule de PMMA de longueur j. Pour simplifier, nous ferons l'hypothèse que $k_{t}$ ne dépend pas de la longueur des chaines.
 
 \section{Transfert}
-Nous disposons de plusieurs agents de transfert Tr pour lesquels nous connaissons les $C_{s}=\frac{k_{s}}{k_{p}}$. Ces derniers peuvent neutraliser une chaine et produire un radical qui pourra amorcer une nouvelle chaine:
+Nous disposons de plusieurs agents de transfert TrH pour lesquels nous connaissons les $C_{s}=\frac{k_{s}}{k_{p}}$. Ces derniers peuvent neutraliser une chaine et produire un radical qui pourra amorcer une nouvelle chaine:
 \begin{equation}
-\ce{R_{j} + TrH \xrightarrow{k_s} R_{j}H + Tr^{\bullet}}
+\ce{R_{j}^\bullet + TrH \xrightarrow{k_s} R_{j}H + Tr^{\bullet}}
 \end{equation}
 
 \begin{equation}
-\ce{Tr^{\bullet} + M \xrightarrow{k_i,tr} R_{1}}
+\ce{Tr^{\bullet} + M \xrightarrow{k_i,tr} R_{1}^\bullet}
 \end{equation}
 
 Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
+
 \section{Calcul des lois de concentrations}
 $\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
 
 $\bullet$ La vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
-\begin{align*}
-r_{1}=\frac{d[R_{1}]}{dt}=r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}][M]-k_{t}[R_1]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{1}][TrH]
-\end{align*}
 
-\begin{align*}
-r_{2}=\frac{d[R_{2}]}{dt}=k_p[R_{1}][M]-k_p[R_{2}][M]-k_{t}[R_2]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{2}][TrH]
-\end{align*}
+\begin{eqnarray*}
+r_{1} &=& \frac{d[R_{1}]}{dt}\\
+      &=& r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}][M]-k_{t}[R_1]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{1}][TrH]
+\end{eqnarray*}
 
-\begin{align*}
-r_{m}=\frac{d[R_{m}]}{dt}=k_p[R_{m-1}][M]-k_p[R_{m}][M]-k_{t}[R_m]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{m}][TrH]
-\end{align*}
+\begin{eqnarray*}
+r_{2} &=& \frac{d[R_{2}]}{dt}\\
+	&=& k_p[R_{1}][M]-k_p[R_{2}][M]-k_{t}[R_2]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{2}][TrH]
+\end{eqnarray*}
+
+\begin{eqnarray*}
+r_{m} &=& \frac{d[R_{m}]}{dt}\\
+      &=& k_p[R_{m-1}][M]-k_p[R_{m}][M]-k_{t}[R_m]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{m}][TrH]
+\end{eqnarray*}
 
 Par conséquent:
 
@@ -148,7 +154,7 @@ Finalement, l'HQSR utilisée sur les radicaux R nous permet de dire que $\sum\li
 
 $$[R]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
 
-$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{TrH}=-\frac{d[TrH]}{dt}=k_s[R][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$ ce qui donne après intégration:
+$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{tr}=-\frac{d[TrH]}{dt}=k_s[R^{\bullet}][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$, ce qui donne après intégration:
 
 $$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})+c$$
 $$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}*[TrH]_{t=0}$$

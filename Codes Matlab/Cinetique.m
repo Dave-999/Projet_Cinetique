@@ -7,7 +7,7 @@ TrH0=10^-4;%Augmenter [TRH]t=0 diminue le DPn --> OK
 f=0.7;
 t=linspace(0,24*60*60,1000);%On analyse sur 24h
 
-AIBN=zeros(1,1000)
+AIBN=zeros(1,1000);
 AIBN(1)=AIBN0;
 
 for i=2:1000
@@ -52,7 +52,7 @@ for i=1:1000
     if P(i)>0.4 && P(i)<0.8
         k_p=polyval(Pkp,P(i));
     end
-    R(i)=(r_i/k_t)^1/2
+    R(i)=(r_i/k_t)^1/2;
     k_s=C_s*k_p;
     TrH(i)=TrH(1)*exp(-sqrt(r_i/k_t)*k_s*t(i)); %Si r_i = cste
     M(i)=M(1)*exp(-sqrt(r_i/k_t)*k_p*t(i));
@@ -60,7 +60,7 @@ for i=1:1000
     %TrH(i)=TrH0-exp((2*k_s/k_0)*(R(i)-R(1))); % Cas général
     %M(i)=M0-exp((2*k_p/k_0)*(R(i)-R(1)));
     %P(i)=2*f*AIBN(1)*(1-exp(-k_0*t(i)))+k_s*R(1)*(exp((k_s/k_0)*R(1)*(exp(-k_0*t(i)/2)-1)-(k_0*t(i)/2))-1);
-    alpha(i)=k_p*R(i)*M(i)/(k_p*R(i)*M(i)+k_s*R(i)*TrH(i)+k_t*R(i)^2)
+    alpha(i)=k_p*R(i)*M(i)/(k_p*R(i)*M(i)+k_s*R(i)*TrH(i)+k_t*R(i)^2);
 end
 figure
 plot(t,2./(1-alpha))
