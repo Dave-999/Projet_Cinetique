@@ -142,12 +142,12 @@ $$[R]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
 $\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{TrH}=-\frac{d[TrH]}{dt}=k_s[R][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$ ce qui donne après intégration:
 
 $$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})+c$$
-$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}+([TrH]_{t=0}-1)$$
+$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}*[TrH]_{t=0}$$
 
 
 $\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
 
-$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}+([M]_{t=0}-1)$$
+$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}*[M]_{t=0}$$
 
 $\bullet$La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R]^2+k_{s}[R][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. En développant et mettant les $[R]_{t=0}$ en évidence, on a :
 $$[P]=\int_{0}^t R_{0}^{2}k_te^{-k_0t'}+k_sR_0e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}R_0(e^{-k_0t'/2}-1)} dt'$$
