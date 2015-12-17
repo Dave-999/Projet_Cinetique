@@ -10,18 +10,18 @@ M0=0.5;%Valeurs arbitraires plausibles
 TrH0=10^-4;%Augmenter [TRH]t=0 diminue le DPn --> OK
 t=linspace(0,24*60*60,1000);%On analyse sur 24h
 
-AIBN=zeros(1,1000)
+AIBN=zeros(1,1000);
 AIBN(1)=AIBN0;
 
 for i=2:1000
 
-    AIBN(i)=AIBN(1)*exp(-k_0*t(i)) %Epuisement de l'AIBN
+    AIBN(i)=AIBN(1)*exp(-k_0*t(i)); %Epuisement de l'AIBN
  if AIBN(i)<=0
         break
     end
 end
-figure
-plot(t,AIBN)
+figure;
+plot(t,AIBN);
 %Fonction de kt
 Xt=[0 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.80];
 kt=[10^7.7 10^7.5 10^6.7 10^5.9 10^5.8 10^5.25 10^4.45 10^3.95 10^3.2];
