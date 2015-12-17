@@ -118,21 +118,26 @@ Nous disposons de plusieurs agents de transfert TrH pour lesquels nous connaisso
 \end{equation}
 
 Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
+
 \section{Calcul des lois de concentrations}
 $\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
 
 $\bullet$ La vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
-\begin{align*}
-r_{1}=\frac{d[R_{1}]}{dt}=r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}][M]-k_{t}[R_1]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{1}][TrH]
-\end{align*}
 
-\begin{align*}
-r_{2}=\frac{d[R_{2}]}{dt}=k_p[R_{1}][M]-k_p[R_{2}][M]-k_{t}[R_2]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{2}][TrH]
-\end{align*}
+\begin{eqnarray*}
+r_{1} &=& \frac{d[R_{1}]}{dt}\\
+      &=& r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}][M]-k_{t}[R_1]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{1}][TrH]
+\end{eqnarray*}
 
-\begin{align*}
-r_{m}=\frac{d[R_{m}]}{dt}=k_p[R_{m-1}][M]-k_p[R_{m}][M]-k_{t}[R_m]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{m}][TrH]
-\end{align*}
+\begin{eqnarray*}
+r_{2} &=& \frac{d[R_{2}]}{dt}\\
+	&=& k_p[R_{1}][M]-k_p[R_{2}][M]-k_{t}[R_2]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{2}][TrH]
+\end{eqnarray*}
+
+\begin{eqnarray*}
+r_{m} &=& \frac{d[R_{m}]}{dt}\\
+      &=& k_p[R_{m-1}][M]-k_p[R_{m}][M]-k_{t}[R_m]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{m}][TrH]
+\end{eqnarray*}
 
 Par conséquent:
 
