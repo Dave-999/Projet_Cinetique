@@ -77,25 +77,25 @@ La réaction que nous analysons est une polymérisation radicalaire. Elle peut d
 \section{Amorçage}
 L'amorceur utilisé est une molécule d'azobisisobutyronitrile (AIBN). 
 \begin{equation}
-	\ce{AIBN \underset{lent}{\xrightarrow{k_0}} N2 + 2A^\bullet}
+	\ce{AIBN \underset{lent}{\xrightarrow{k_0}} N2 + 2A^{\bullet}}
 \end{equation}	
 La vitesse de décomposition de l'AIBN est très lente part rapport à la réaction \ref{2}. Seule une fraction f des radicaux créés est efficace pour réagir ensuite de la manière suivante:
 
 \begin{equation}
-\ce{A^{\bullet} + M \underset{rapide}{\xrightarrow{k_i}} R1^\bullet}
+\ce{A^{\bullet} + M \underset{rapide}{\xrightarrow{k_i}} R1^{\bullet}}
 \label{2}
 \end{equation}
 
-où M est une molécule de méthacrylate de méthyle et $\ce{R_1}$ est un radical en croissance. Nous pouvons utiliser l'hypothèse de quasi-stationnarité du radical (HQSR) $\frac{d[A^{\bullet}]}{dt}=0$ et ainsi obtenir que $2fk_{0}[AIBN]=k_{i}[A^{\bullet}][M]=r_i$.
+où M est une molécule de méthacrylate de méthyle et $\ce{R_1^{\bullet}}$ est un radical en croissance. Nous pouvons utiliser l'hypothèse de quasi-stationnarité du radical (HQSR) $\frac{d[A^{\bullet}]}{dt}=0$ et ainsi obtenir que $2fk_{0}[AIBN]=k_{i}[A^{\bullet}][M]=r_i$.
 
 \section{Propagation}
 La chaîne devient de plus en plus grande en annexant des monomères. Pour une chaine de longueur 1, nous avons :
 \begin{equation}
-\ce{R1^\bullet + M \xrightarrow{k_p} R2^\bullet}
+\ce{R1^{\bullet} + M \xrightarrow{k_p} R2^{bullet}}
 \end{equation}
-Nous pouvons généraliser cela à $\ce{R_j}$, une chaîne en croissance composée d'un A auquel j monomères M se sont ajoutés :
+Nous pouvons généraliser cela à $\ce{R_j^{\bullet}}$, une chaîne en croissance composée d'un A auquel j monomères M se sont ajoutés :
 \begin{equation}
-\ce{R_j^\bullet + M \xrightarrow{k_p} R_{j+1}^\bullet}
+\ce{R_j^{\bullet} + M \xrightarrow{k_p} R_{j+1}^{\bullet}}
 \end{equation}
 Les constantes de vitesse $k_{p}$ de toutes les réactions de propagation sont considérés égales, ce qui n'est théoriquement valable que pour chaînes de longueur supérieure à quelques unités. Ceci est l'hypothèse d'équiréactivité de Flory.
 
@@ -103,18 +103,18 @@ Les constantes de vitesse $k_{p}$ de toutes les réactions de propagation sont c
 Il existe deux types de terminaisons: la recombinaison et la dismutation. Travaillant à la température de 22,5$^{\circ}$C, nous négligerons ici la seconde qui ne se produit qu'à plus haute température. La réaction de recombinaison est la suivante:
 
 \begin{equation}
-\ce{R_{n}^\bullet + R_{m}^\bullet \xrightarrow{k_t} P_{n+m}}
+\ce{R_{n}^{\bullet} + R_{m}^{\bullet} \xrightarrow{k_t} P_{n+m}}
 \end{equation}
 où $P_{j}$ est une molécule de PMMA de longueur j. Pour simplifier, nous ferons l'hypothèse que $k_{t}$ ne dépend pas de la longueur des chaines.
 
 \section{Transfert}
 Nous disposons de plusieurs agents de transfert TrH pour lesquels nous connaissons les $C_{s}=\frac{k_{s}}{k_{p}}$. Ces derniers peuvent neutraliser une chaine et produire un radical qui pourra amorcer une nouvelle chaine:
 \begin{equation}
-\ce{R_{j}^\bullet + TrH \xrightarrow{k_s} R_{j}H + Tr^{\bullet}}
+\ce{R_{j}^{\bullet} + TrH \xrightarrow{k_s} R_{j}H + Tr^{\bullet}}
 \end{equation}
 
 \begin{equation}
-\ce{Tr^{\bullet} + M \xrightarrow{k_i,tr} R_{1}^\bullet}
+\ce{Tr^{\bullet} + M \xrightarrow{k_i,tr} R_{1}^{\bullet}}
 \end{equation}
 
 Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
@@ -122,57 +122,58 @@ Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
 \section{Calcul des lois de concentrations}
 $\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
 
-$\bullet$ La vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
+$\bullet$ La vitesse d'apparition globale des chaines $R^{\bullet}$ n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}^{\bullet}$. Nous pouvons trouver que:
 
 \begin{eqnarray*}
-r_{1} &=& \frac{d[R_{1}]}{dt}\\
-      &=& r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}][M]-k_{t}[R_1]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{1}][TrH]
+r_{1} &=& \frac{d[R_{1}^{\bullet}]}{dt}\\
+      &=& r_{i}+k_{i,tr}[Tr^{\bullet}][M]-k_p[R_{1}^{\bullet}][M]-k_{t}[R_1^{\bullet}]\sum\limits_{j=1}^\infty[R_j^{\bullet}]-k_{s}[R_{1}^{\bullet}][TrH]
 \end{eqnarray*}
 
 \begin{eqnarray*}
-r_{2} &=& \frac{d[R_{2}]}{dt}\\
-	&=& k_p[R_{1}][M]-k_p[R_{2}][M]-k_{t}[R_2]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{2}][TrH]
+r_{2} &=& \frac{d[R_{2}^{\bullet}]}{dt}\\
+	&=& k_p[R_{1}^{\bullet}][M]-k_p[R_{2}^{\bullet}][M]-k_{t}[R_2^{\bullet}]\sum\limits_{j=1}^\infty[R_j^{\bullet}]-k_{s}[R_{2}^{\bullet}][TrH]
 \end{eqnarray*}
 
 \begin{eqnarray*}
-r_{m} &=& \frac{d[R_{m}]}{dt}\\
-      &=& k_p[R_{m-1}][M]-k_p[R_{m}][M]-k_{t}[R_m]\sum\limits_{j=1}^\infty[R_j]-k_{s}[R_{m}][TrH]
+r_{m} &=& \frac{d[R_{m}^{\bullet}]}{dt}\\
+      &=& k_p[R_{m-1}^{\bullet}][M]-k_p[R_{m}^{\bullet}][M]-k_{t}[R_m^{\bullet}]\sum\limits_{j=1}^\infty[R_j^{\bullet}]-k_{s}[R_{m}^{\bullet}][TrH]
 \end{eqnarray*}
 
 Par conséquent:
 
 \begin{equation}
-\sum\limits_{m=1}^\infty r_{m}=r_i+ k_{i,tr}[Tr^{\bullet}][M] -k_{t}\sum\limits_{m=1}^\infty [R_m] \sum\limits_{j=1}^\infty[R_j]-k_{s}\sum\limits_{m=1}^\infty[R_{m}][TrH]
+\sum\limits_{m=1}^\infty r_{m}=r_i+ k_{i,tr}[Tr^{\bullet}][M] -k_{t}\sum\limits_{m=1}^\infty [R_m^{\bullet}] \sum\limits_{j=1}^\infty[R_j^{\bullet}]-k_{s}\sum\limits_{m=1}^\infty[R_{m}^{\bullet}][TrH]
 \end{equation}
-L'HQSR appliquée sur $Tr^{\bullet}$ nous donne: $\frac{d[Tr^{\bullet}]}{dt}=0=k_{i,tr}[Tr^{\bullet}][M]-k_{s}\sum\limits_{m=1}^\infty[R_{m}][TrH]$. Nous pouvons donc simplifier notre expression. De plus, $\sum\limits_{j=1}^\infty[R_j] = [R]$:
+L'HQSR appliquée sur $Tr^{\bullet}$ nous donne: $\frac{d[Tr^{\bullet}]}{dt}=0=k_{i,tr}[Tr^{\bullet}][M]-k_{s}\sum\limits_{m=1}^\infty[R_{m}^{\bullet}][TrH]$. Nous pouvons donc simplifier notre expression. De plus, $\sum\limits_{j=1}^\infty[R_j^{\bullet}] = [R^{\bullet}]$:
 
 \begin{equation}
-\sum\limits_{m=1}^\infty r_{m}=r_i-k_{t}[R]^2
+\sum\limits_{m=1}^\infty r_{m}=r_i-k_{t}[R^{\bullet}]^2
 \end{equation}
 
-Finalement, l'HQSR utilisée sur les radicaux R nous permet de dire que $\sum\limits_{m=1}^\infty r_{m}=0$ et donc que $r_i=k_{t}[R]^2=2fk_{0}[AIBN]$. La concentration en R est alors:
+Finalement, l'HQSR utilisée sur les radicaux $R^{\bullet}$ nous permet de dire que $\sum\limits_{m=1}^\infty r_{m}=0$ et donc que $r_i=k_{t}[R^{\bullet}]^2=2fk_{0}[AIBN]$. La concentration en $R^{\bullet}$ est alors:
 
-$$[R]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
+$$[R^{\bullet}]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
 
-$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{tr}=-\frac{d[TrH]}{dt}=k_s[R^{\bullet}][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$, ce qui donne après intégration:
+$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{tr}=-\frac{d[TrH]}{dt}=k_s[R^{\bullet}][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R^{\bullet}(t')]dt'$, ce qui donne après intégration:
 
-$$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})+c$$
-$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}*[TrH]_{t=0}$$
+$$ln[TrH]=\frac{2k_{s}}{k_0}[R^{\bullet}]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R^{\bullet}]-[R^{\bullet}]_{t=0})+c$$
+$$[TrH]=e^{\frac{2k_{s}}{k_0}([R^{\bullet}]-[R^{\bullet}]_{t=0})}[TrH]_{t=0}$$
 
 
-$\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
+$\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R^{\bullet}]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R^{\bullet}]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
 
-$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}*[M]_{t=0}$$
+$$[M]=e^{\frac{2k_{p}}{k_0}([R^{\bullet}]-[R^{\bullet}]_{t=0})}[M]_{t=0}$$
 
-$\bullet$La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R]^2+k_{s}[R][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. En développant et mettant les $[R]_{t=0}$ en évidence, on a :
-$$[P]=\int_{0}^t R_{0}^{2}k_te^{-k_0t'}+k_sR_0e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}R_0(e^{-k_0t'/2}-1)} dt'$$
+$\bullet$La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R^{\bullet}]^2+k_{s}[R^{\bullet}][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. En développant et mettant les $[R^{\bullet}]_{t=0}$ en évidence, on obtient :
+$$[P]=\int_{0}^t ([R^{\bullet}]^{2}_{t=0}k_te^{-k_0t'}+k_s[R^{\bullet}]_{t=0}e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}[R^{\bullet}]_{t=0}(e^{-k_0t'/2}-1)})dt'$$
+
 Le résultat de cette intégrale est:
-$$[P]=-\frac{k_t[R]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R]_{t=0}^2}{k_0}+k_s[R]_{t=0}e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R]_{t=0}$$
-$$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R]_{t=0}(e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
+$$[P]=-\frac{k_t[R^{\bullet}]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R^{\bullet}]_{t=0}^2}{k_0}+k_s[R^{\bullet}]_{t=0}e^{\frac{k_s[R^{\bullet}]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R^{\bullet}]_{t=0}$$
+$$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R^{\bullet}]_{t=0}(e^{\frac{k_s[R^{\bullet}]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
 
 \section{Degré de polymérisation}
 Soit $\alpha$ la probabilité d'allongement d'une chaine radicalaire en croissance: 
-$$\alpha=\frac{k_p[R][M]}{k_p[R][M]+k_s[R][TrH]+k_t[R]^2}$$
+$$\alpha=\frac{k_p[R^{\bullet}][M]}{k_p[R^{\bullet}][M]+k_s[R^{\bullet}][TrH]+k_t[R^{\bullet}]^2}$$
 %=\frac{1}
 %      {1+   \frac{k_s}{k_p}e^{\frac{k_s}{k_p}}     +\frac{k_t[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}        
 %                                                    {k_pe^{\frac{2k_p[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}%%%%{k_0}    }}
