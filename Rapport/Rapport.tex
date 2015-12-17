@@ -182,7 +182,33 @@ On obtient le degré de polymérisation moyen en nombre (DPn) ou en poids (DPw) 
 $$DPn=\frac{2}{1-\alpha}$$
 $$DPw=\frac{2+\alpha}{1-\alpha}$$
 
+\section{Cas simplifié}
+Dans un premier temps, on considérera les constantes de vitesses comme invariantes en fonction du temps. On choisira également de négliger la variation de concentration [AIBN], ce pourquoi $r_i$ est considérée constante (car $r_i=2fk_0[AIBN]$). De plus, la présence d'agent de transfert est négligée. On obtient:
+$$[AIBN]=[AIBN]_{t=0}$$
+$$[R^{\bullet}]=(\frac{r_i}{k_0})^{\frac{1}{2}}=[R^{\bullet}]_{t=0}$$
+$$ln([M])=-\int_0^{t} k_p[M][R^{\bullet}] <=> [M]=e^{-k_p[R^{\bullet}]t}[M]_{t=0}$$
+$$[P]=k_t[R^{\bullet}]^2t=r_i t$$
+
+Voilà les graphes correspondant à ce cas:
+
+%[INSERER GRA%APHES :-) ]
+
 \part{Influence des différents effets observés}
+
+Ajoutons maintenant les différents phénomènes pouvant altérer la cinétique des réactions.\\
+
+$\bullet$ L'effet Trommsdorff (également appelé effet "gel" ou d'auto-accélération) est responsable d'une baisse du $k_t$ corrélée de manière exponentielle à la concentration en monomères. En effet, au fil de la réaction, les chaines créées deviennent de plus en plus longues, s'emmêlent et perdent leur diffusivité par rapport au monomères. Les terminaisons, nécessitant deux radicaux, deviennent donc plus difficiles et la propagation gagne en importance. Le DPn augmente donc.\\
+\space
+
+$\bullet$ L'effet de vitrification: nous sommes à une température bien en dessous de celle de vitrification du PMMA. Par conséquent, le système passe progressivement vers une transition vitreuse et la mobilité des monomères en est diminuée: $k_p$ diminue donc aussi jusqu'à tomber à 0. Système à un état trop visqueux/solide pour que la réaction puisse continuer. Pour une température entre 20 et 50$^{\circ}$C, le taux de conversion va de 60 à 90 $\%$ \footnote{https://books.google.be/books?
+id=0jGnykE4PuEC$\&$pg=PA41$\&$lpg=PA41$\&$dq=polym$\%$C3$\%$A9risation+radicalaire+vitrification$\&$source=bl$\&$ots=4dQord5Zcu$\&$sig=WaEfwFHcsy8daffRxj49SCK1XDY$\&$hl=fr$\&$sa=X$\&$ved=0ahUKEwiz8aWfjeDJAhWG1RQKHan2BrEQ6AEIHzAA$\#$v=onepage$\&$q=polym
+$\%$C3$\%$A9risation$\%$20radicalaire$\%$20vitrification$\&$f=false}.
+Pour que cet effet disparaisse, on devrait augmenter la température de manière suffisante.\\
+Puisque des données expérimentales nous sont fournies, nous pouvons déterminer l'évolution des constantes $k_t$ et $k_p$.\\
+
+\space
+
+$\bullet$ L'ajout d'un agent de transfert à tout d'abord l'effet majeur de diminuer globalement le degré de polymérisation. En effet, il réagit avec les chaines $R^{\bullet}$ et stoppe leur croissance, tout en créant des nouvelle chaine $R_1^{\bullet}$. On voit également grâce à nos calculs que la vitesse de production de polymères morts est diminuée, avec un impact plus grand pour un agent de transfert dont le $C_s$ est plus grand.
 
 \part{Epuisement de l'amorceur}
 
