@@ -37,10 +37,10 @@ ylabel('Concentration [mol/L]');
 axis([0 24*60*60 0 10^-3]);
 
 figure;
-plot(t,M);
-title('[M]');
+plot(t,1-M/M0);
+title('X_M');
 xlabel('t [s]');
-ylabel('Concentration [mol/L]');
+ylabel('Fraction convertie en monomères');
 
 figure;
 plot(t,R);

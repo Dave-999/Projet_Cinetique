@@ -50,20 +50,20 @@ figure;
 plot(t,ones(1,1000)*AIBN);
 title('[AIBN]');
 xlabel('t [s]');
-ylabel('Concentration [1/L]');
+ylabel('Concentration [mol/L]');
 axis([0 24*60*60 0 10^-3]);
 
 figure;
-plot(t,M);
-title('[M]');
+plot(t,1-M/M0);
+title('X_M');
 xlabel('t [s]');
-ylabel('Concentration [mol/L]');
+ylabel('Fraction convertie en monomères');
 
 figure;
 plot(t,R);
 title('[R]');
 xlabel('t [s]');
-ylabel('Concentration [1/L]');
+ylabel('Concentration [mol/L]');
 %axis([0 24*60*60]);
 
 figure;
