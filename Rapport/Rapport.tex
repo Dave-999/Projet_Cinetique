@@ -120,9 +120,11 @@ Nous disposons de plusieurs agents de transfert TrH pour lesquels nous connaisso
 Nous faisons l'hypothèse que $k_s$ est indépendant de la longueur des chaines.
 
 \section{Calcul des lois de concentrations}
-$\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
+Le cas que nous considérons d'abord est très simplifié. Dans le chapitre suivant, nous prendrons en compte les phénomènes particuliers qui affectent la cinétique du système. Cela nous donnera donc un modèle plus réaliste. Mais dans un premier temps, on considérera donc les constantes de vitesses comme invariantes en fonction du temps. On choisira également de négliger la variation de concentration [AIBN], ce pourquoi la vitesse $r_i$ sera considérée constante (car $r_i=2fk_0[AIBN]$). On obtient:
+$$[AIBN]=[AIBN]_{t=0}$$
+%$\bullet$ Commençons par calculer la concentration en AIBN. Puisque le composé n'apparait que dans la première équation, l'expression de sa vitesse de disparition est simplement: $-\frac{d[AIBN]}{dt}=k_{0}[AIBN]$. On trouve aisément la solution: $$[AIBN]=[AIBN]_{t=0}e^{-k_{0}t} $$.\\
 
-$\bullet$ La vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
+De manière générale, la vitesse d'apparition globale des chaines R n'est autre que la somme des vitesses $r_{m}$ de chaque chaine $R_{m}$. Nous pouvons trouver que:
 
 \begin{eqnarray*}
 r_{1} &=& \frac{d[R_{1}]}{dt}\\
@@ -150,25 +152,28 @@ L'HQSR appliquée sur $Tr^{\bullet}$ nous donne: $\frac{d[Tr^{\bullet}]}{dt}=0=k
 \sum\limits_{m=1}^\infty r_{m}=r_i-k_{t}[R]^2
 \end{equation}
 
-Finalement, l'HQSR utilisée sur les radicaux R nous permet de dire que $\sum\limits_{m=1}^\infty r_{m}=0$ et donc que $r_i=k_{t}[R]^2=2fk_{0}[AIBN]$. La concentration en R est alors:
+Finalement, l'HQSR utilisée sur les radicaux R nous permet de dire que $\sum\limits_{m=1}^\infty r_{m}=0$ et donc que $r_i=k_{t}[R]^2$. La concentration en R est alors:
 
-$$[R]=(\frac{2fk_{0}[AIBN]}{k_t})^{\frac{1}{2}}$$\\
+$$[R]=(\frac{r_i}{k_t})^{\frac{1}{2}}$$\\
 
-$\bullet$ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{tr}=-\frac{d[TrH]}{dt}=k_s[R^{\bullet}][TrH]$. Il s'en suit que $ln([TrH])=-k_s\int_{0}^t [R(t') dt'$, ce qui donne après intégration:
+La concentration en R est constante!\\
 
-$$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})+c$$
-$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}*[TrH]_{t=0}$$
+ Calculons la concentration en agent de transfert. Ce composé n'apparait que dans une réaction, donc: $r_{tr}=-\frac{d[TrH]}{dt}=k_s[R^{\bullet}][TrH]$. Il s'en suit que $ln([TrH])=-k_s[R]\int_{0}^t dt'$, ce qui donne après intégration:
 
+%$$ln[TrH]=\frac{2k_{s}}{k_0}[R]_{t=0}(e^{-k_{0}t/2} - 1)+c=\frac{2k_{s}}{k_0}([R]-[R]_{t=0})+c$$
+%$$[TrH]=e^{\frac{2k_{s}}{k_0}([R]-[R]_{t=0})}*[TrH]_{t=0}$$
+$$[TrH]=e^{-k_s[R^{\bullet}]t}[TrH]_{t=0}$$
 
-$\bullet$Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
+Passons maintenant à la concentration en monomères M. La vitesse de disparition de M est $r_M = -\frac{d[M]}{dt}=r_{i}+k_{i,tr}[M][Tr^{\bullet}]+k_{p}[M][R]$. En faisant l'hypothèse des chaines longues, nous pouvons considérer que les 2 vitesses d'amorçage sont négligeables par rapport à toutes celles de propagation. On a donc que $-\frac{d[M]}{dt}\cong k_{p}[M][R]$ ce qui se résout exactement de la même manière que pour l'agent de transfert.
 
-$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}*[M]_{t=0}$$
+%$$[M]=e^{\frac{2k_{p}}{k_0}([R]-[R]_{t=0})}*[M]_{t=0}$$
+$$[M]=e^{-k_p[R^{\bullet}]t}[M]_{t=0}$$
 
-$\bullet$La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R]^2+k_{s}[R][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. En développant et mettant les $[R]_{t=0}$ en évidence, on a :
-$$[P]=\int_{0}^t R_{0}^{2}k_te^{-k_0t'}+k_sR_0e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}R_0(e^{-k_0t'/2}-1)} dt'$$
-Le résultat de cette intégrale est:
-$$[P]=-\frac{k_t[R]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R]_{t=0}^2}{k_0}+k_s[R]_{t=0}e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R]_{t=0}$$
-$$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R]_{t=0}(e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
+La vitesse d'apparition de PMMA est donnée par $\frac{d[P]}{dt}=k_{t}[R]^2+k_{s}[R][TrH]$. On obtient alors la fonction à intégrer pour trouver [P]. Si nous négligeons l'impact de l'agent de transfert, on voit de manière immédiate que $[P]=r_i t$. %En développant et mettant les $[R]_{t=0}$ en évidence, on a :
+%$$[P]=\int_{0}^t R_{0}^{2}k_te^{-k_0t'}+k_sR_0e^{\frac{-k_0t'}{2}}e^{2\frac{k_s}{k_0}R_0(e^{-k_0t'/2}-1)} dt'$$
+%Le résultat de cette intégrale est:
+%$$[P]=-\frac{k_t[R]_{t=0}^2e^{-k_0t}}{k_0}+\frac{k_t[R]_{t=0}^2}{k_0}+k_s[R]_{t=0}e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-k_s[R]_{t=0}$$
+%$$[P]=2f[AIBN]_{t=0}(1-e^{-k_0t})+k_s[R]_{t=0}(e^{\frac{k_s[R]_{t=0}(e^{\frac{-k_0t}{2}}-1)}{k_0}-\frac{k_0t}{2}}-1)$$
 
 \section{Degré de polymérisation}
 Soit $\alpha$ la probabilité d'allongement d'une chaine radicalaire en croissance: 
@@ -181,17 +186,8 @@ On obtient le degré de polymérisation moyen en nombre (DPn) ou en poids (DPw) 
 $$DPn=\frac{2}{1-\alpha}$$
 $$DPw=\frac{2+\alpha}{1-\alpha}$$
 
-\section{Cas simplifié}
-Dans un premier temps, on considérera les constantes de vitesses comme invariantes en fonction du temps. On choisira également de négliger la variation de concentration [AIBN], ce pourquoi $r_i$ est considérée constante (car $r_i=2fk_0[AIBN]$). On obtient:
-$$[AIBN]=[AIBN]_{t=0}$$
-$$[R^{\bullet}]=(\frac{r_i}{k_t})^{\frac{1}{2}}=[R^{\bullet}]_{t=0}$$
-$$ln([M])=-\int_0^{t} k_p[M][R^{\bullet}] <=> [M]=e^{-k_p[R^{\bullet}]t}[M]_{t=0}$$
-$$TrH=e^{-k_s[R^{\bullet}]t}[TrH]_{t=0}$$
-$$[P]=k_t[R^{\bullet}]^2 t - k_s[R^{\bullet}]\int_0^t [TrH]$$
-Si on néglige la présence d'agent de transfert:
-$$[P]=k_t[R^{\bullet}]^2t=r_i t$$
-
-Voilà les graphes correspondant à ce cas:
+\section{Graphes}
+Les résultats suivants sont obtenus en négligeant la réaction de transfert et avec le set de données suivant:
 
 %[INSERER GRA%APHES :-) ]
 
@@ -199,8 +195,13 @@ Voilà les graphes correspondant à ce cas:
 
 Ajoutons maintenant les différents phénomènes pouvant altérer la cinétique des réactions.\\
 
-$\bullet$ L'effet Trommsdorff (également appelé effet "gel" ou d'auto-accélération) est responsable d'une baisse du $k_t$ corrélée de manière exponentielle à la concentration en monomères. En effet, au fil de la réaction, les chaines créées deviennent de plus en plus longues, s'emmêlent et perdent leur diffusivité par rapport au monomères. Les terminaisons, nécessitant deux radicaux, deviennent donc plus difficiles et la propagation gagne en importance. Le DPn augmente donc.\\
+\section{L'effet Trommsdorff} 
+Egalement appelé effet "gel" ou d'auto-accélération, il est responsable d'une baisse du $k_t$ corrélée de manière exponentielle à la concentration en monomères. En effet, au fil de la réaction, les chaines créées deviennent de plus en plus longues, s'emmêlent et perdent leur diffusivité par rapport au monomères. Les terminaisons, nécessitant deux radicaux, deviennent donc plus difficiles et la propagation gagne en importance. Le DPn augmente donc.\\
+Des valeurs expérimentales de $k_t$ en fonction de la fraction convertie en monomères nous ont été données. Nous avons approximé ces valeurs par une droite. Comme $k_t$ varie maintenant avec le temps, nous devons adapter [M] qui doit maintenant être égal à:
+$$[M]=e^{-k_pr_i^{\frac{1}{2}}\int_0^t k_t^{\frac{-1}{2}}dt'}[M]_{t=0}$$
+Connaissant $k_t$ en fonction de [M], nous devons alors résoudre un système de deux équations à 2 inconnues ce que nous pouvons faire numériquement. Voilà les résultats:.................
 \space
+
 
 $\bullet$ L'effet de vitrification: nous sommes à une température bien en dessous de celle de vitrification du PMMA. Par conséquent, le système passe progressivement vers une transition vitreuse et la mobilité des monomères en est diminuée: $k_p$ diminue donc aussi jusqu'à tomber à 0. Système à un état trop visqueux/solide pour que la réaction puisse continuer. Pour une température entre 20° et 50°C, le taux de conversion va de 60 à 90 $\%$ \footnote{https://books.google.be/books?
 id=0jGnykE4PuEC$\&$pg=PA41$\&$lpg=PA41$\&$dq=polym$\%$C3$\%$A9risation+radicalaire+vitrification$\&$source=bl$\&$ots=4dQord5Zcu$\&$sig=WaEfwFHcsy8daffRxj49SCK1XDY$\&$hl=fr$\&$sa=X$\&$ved=0ahUKEwiz8aWfjeDJAhWG1RQKHan2BrEQ6AEIHzAA$\#$v=onepage$\&$q=polym
